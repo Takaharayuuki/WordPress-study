@@ -80,7 +80,7 @@
 								// get_the_category カテゴリを表示
 								if ($category[0]) {
 									echo '<div class="entry-item-tag">' . $category[0]->cat_name . '</div><!-- /entry-item-tag -->';
-								} 
+								}
 							?>
 								<time class="entry-item-published" datetime="<?php the_time('c');?>"><?php the_time('Y/n/j'); ?></time><!-- /entry-item-published -->
 								<!-- the_time() 時間を表示する -->
