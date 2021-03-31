@@ -96,14 +96,24 @@
 
 				</div><!-- /entries -->
 				<?php endif; ?>
-
+				
+				<?php if(paginate_links()): //ページが１ページ以上あれば以下を表示 ?>
 				<!-- pagenation -->
 				<div class="pagenation">
-					<span class="page-numbers current">1</span>
-					<a class="page-numbers" href="#">2</a>
-					<a class="page-numbers" href="#">3</a>
-					<a class="next page-numbers" href="#"><i class="fas fa-angle-right"></i></a>
+				<?php 
+				echo
+				paginate_links(
+					array(
+						'end_size' => 1,
+						'mid_size' => 1,
+						'prev_next' => true,
+						'prev_text' => '<i class="fas fa-angle-left"></i>',
+						'next_text' => '<i class="fas fa-angle-right"></i>',
+					)
+					);
+				?>
 				</div><!-- /pagenation -->
+				<?php endif; ?>
 
 			</main><!-- /primary -->
 
